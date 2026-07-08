@@ -1,7 +1,6 @@
 hello world
 hi !
 how are you?
-ted
-tu 
-bude 
-nob
+aaaa
+
+to není všechno horste
