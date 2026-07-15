@@ -35,7 +35,7 @@
 
             <hr />
 
-            <h3>Počítadlo</h3>
+            <h3>Fibonnaciho tlacitko</h3>
 
             <asp:Label
                 ID="lblCislo"
