@@ -22,6 +22,37 @@ namespace WebApplication1
             }
         }
 
+        private int Prvni
+        {
+            get
+            {
+                if (ViewState["Prvni"] == null)
+                {
+                    ViewState["Prvni"] = 0;
+                }
+                return (int)ViewState["Prvni"];
+            }
+            set
+            {
+                ViewState["Prvni"] = value;
+            }
+        }
+        private int Druhe
+        {
+            get
+            {
+                if (ViewState["Druhe"] == null)
+                {
+                    ViewState["Druhe"] = 1;
+                }
+                return (int)ViewState["Druhe"];
+            }
+            set
+            {
+                ViewState["Druhe"] = value;
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -59,39 +90,6 @@ namespace WebApplication1
             }
 
             lblVysledek.Text = string.Join(", ", posloupnost);
-        }
-
-
-        private int Prvni
-        {
-            get
-            {
-                if (ViewState["Prvni"] == null)
-                {
-                    ViewState["Prvni"] = 0;
-                }
-                return (int)ViewState["Prvni"];
-            }
-            set
-            {
-                ViewState["Prvni"] = value;
-            }
-        }
-
-        private int Druhe
-        {
-            get
-            {
-                if (ViewState["Druhe"] == null)
-                {
-                    ViewState["Druhe"] = 1;
-                }
-                return (int)ViewState["Druhe"];
-            }
-            set
-            {
-                ViewState["Druhe"] = value;
-            }
         }
 
         protected void btnDalsiCislo_Click(object sender, EventArgs e)
