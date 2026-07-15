@@ -61,6 +61,12 @@ namespace WebApplication1
 
         protected void btnDalsiCislo_Click(object sender, EventArgs e)
         {
+            if (AktualniCislo == 1)
+            {
+                lblCislo.Text += ", " + AktualniCislo.ToString();
+                return;
+            }   
+
             AktualniCislo++;
             lblCislo.Text = AktualniCislo.ToString();
         }
