@@ -68,10 +68,10 @@ namespace WebApplication1
         {
             if (!int.TryParse(txtPocet.Text, out int pocet) ||
                 pocet < 1 ||
-                pocet > 90)
+                pocet > 199)
             {
                 lblVysledek.Text =
-                    "Zadejte počet prvků v rozsahu 1 až 90.";
+                    "Zadejte počet prvků v rozsahu 1 až 199.";
                 return;
             }
 
