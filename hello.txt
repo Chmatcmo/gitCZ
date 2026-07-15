@@ -1,11 +1,9 @@
 hello world
 hi !
 how are you?
-<<<<<<< HEAD
 ted
 tu 
 bude 
 nob
 =======
-aaaa
->>>>>>> remotes/origin/main
+
