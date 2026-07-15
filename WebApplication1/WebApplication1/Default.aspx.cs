@@ -26,6 +26,8 @@ namespace WebApplication1
         {
             if (!IsPostBack)
             {
+                Prvni = 0;
+                Druhe = 1;
                 AktualniCislo = 1;
                 lblCislo.Text = AktualniCislo.ToString();
             }
@@ -59,16 +61,50 @@ namespace WebApplication1
             lblVysledek.Text = string.Join(", ", posloupnost);
         }
 
+
+        private int Prvni
+        {
+            get
+            {
+                if (ViewState["Prvni"] == null)
+                {
+                    ViewState["Prvni"] = 0;
+                }
+                return (int)ViewState["Prvni"];
+            }
+            set
+            {
+                ViewState["Prvni"] = value;
+            }
+        }
+
+        private int Druhe
+        {
+            get
+            {
+                if (ViewState["Druhe"] == null)
+                {
+                    ViewState["Druhe"] = 1;
+                }
+                return (int)ViewState["Druhe"];
+            }
+            set
+            {
+                ViewState["Druhe"] = value;
+            }
+        }
+
         protected void btnDalsiCislo_Click(object sender, EventArgs e)
         {
-            if (AktualniCislo == 1)
-            {
-                lblCislo.Text += ", " + AktualniCislo.ToString();
-                return;
-            }   
-
             AktualniCislo++;
-            lblCislo.Text = AktualniCislo.ToString();
+
+            int fibonacci = Prvni + Druhe;
+
+            // Připojíme další číslo místo přepsání textu
+            lblCislo.Text += ", " + fibonacci.ToString();
+
+            Prvni = Druhe;
+            Druhe = fibonacci;
         }
     }
 }
