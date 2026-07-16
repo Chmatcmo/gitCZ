@@ -13,7 +13,7 @@
             <asp:Label
                 ID="lblPocet"
                 runat="server"
-                Text="Počet prvků:" />
+                Text="Počet prvkůuuuuuuuuuuuuuuu:" />
 
             <asp:TextBox
                 ID="txtPocet"
