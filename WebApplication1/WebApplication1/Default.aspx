@@ -24,7 +24,7 @@
             <asp:Button
                 ID="btnFibonacci"
                 runat="server"
-                Text="Zobrazit Fibonacciho posloupnost"
+                Text="Zobrazit Fibonacccccccciho posloupnost"
                 OnClick="btnFibonacci_Click" />
 
             <br /><br />
