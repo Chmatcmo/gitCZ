@@ -18,7 +18,7 @@
             <asp:TextBox
                 ID="txtPocet"
                 runat="server"
-                TextMode="Numberrrrrrrrrrrr"
+                TextMode="Numberrrreeeerrrrrrrr"
                 Text="10" />
 
             <asp:Button
