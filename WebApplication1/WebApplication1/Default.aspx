@@ -16,21 +16,21 @@
                 <asp:Label
                     ID="lblPocet"
                     runat="server"
-                    Text="Počet prvkůuuuuuuuuuuuuuuu:" />
+                    Text="Počet prvků:" />
 
-                <asp:TextBox
-                    ID="txtPocet"
-                    runat="server"
-                    TextMode="Numberrrreeeerrrrrrrr"
-                    Text="10" />
+                <div class="controls">
+                    <asp:TextBox
+                        ID="txtPocet"
+                        runat="server"
+                        TextMode="Number"
+                        Text="10" />
 
-                <asp:Button
-                    ID="btnFibonacci"
-                    runat="server"
-                    Text="Zobrazit Fibonacccccccciho posloupnost"
-                    OnClick="btnFibonacci_Click" />
-
-                <br /><br />
+                    <asp:Button
+                        ID="btnFibonacci"
+                        runat="server"
+                        Text="Zobrazit posloupnost"
+                        OnClick="btnFibonacci_Click" />
+                </div>
 
                 <asp:Label
                     ID="lblVysledek"
