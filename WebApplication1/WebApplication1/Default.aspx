@@ -5,51 +5,55 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
+    <meta charset="utf-8" />
     <title>Fibonacciho posloupnost</title>
+    <link href="Content/site.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Label
-                ID="lblPocet"
-                runat="server"
-                Text="Počet prvkůuuuuuuuuuuuuuuu:" />
+        <div class="page-center">
+            <div class="card">
+                <asp:Label
+                    ID="lblPocet"
+                    runat="server"
+                    Text="Počet prvkůuuuuuuuuuuuuuuu:" />
 
-            <asp:TextBox
-                ID="txtPocet"
-                runat="server"
-                TextMode="Numberrrreeeerrrrrrrr"
-                Text="10" />
+                <asp:TextBox
+                    ID="txtPocet"
+                    runat="server"
+                    TextMode="Numberrrreeeerrrrrrrr"
+                    Text="10" />
 
-            <asp:Button
-                ID="btnFibonacci"
-                runat="server"
-                Text="Zobrazit Fibonacccccccciho posloupnost"
-                OnClick="btnFibonacci_Click" />
+                <asp:Button
+                    ID="btnFibonacci"
+                    runat="server"
+                    Text="Zobrazit Fibonacccccccciho posloupnost"
+                    OnClick="btnFibonacci_Click" />
 
-            <br /><br />
+                <br /><br />
 
-            <asp:Label
-                ID="lblVysledek"
-                runat="server" />
+                <asp:Label
+                    ID="lblVysledek"
+                    runat="server" />
 
-            <hr />
+                <hr />
 
-            <h3>Fibonnaciho tlacitko</h3>
+                <h3>Fibonnaciho tlacitko</h3>
 
-            <asp:Label
-                ID="lblCislo"
-                runat="server"
-                Text="1"
-                Font-Size="Large" />
+                <asp:Label
+                    ID="lblCislo"
+                    runat="server"
+                    Text="1"
+                    CssClass="number-badge" />
 
-            <br /><br />
+                <br /><br />
 
-            <asp:Button
-                ID="btnDalsiCislo"
-                runat="server"
-                Text="Přidat další číslo"
-                OnClick="btnDalsiCislo_Click" />
+                <asp:Button
+                    ID="btnDalsiCislo"
+                    runat="server"
+                    Text="Přidat další číslo"
+                    OnClick="btnDalsiCislo_Click" />
+            </div>
         </div>
     </form>
 </body>
