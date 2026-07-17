@@ -76,5 +76,14 @@ namespace WebApplication1
         /// K úpravě deklarace pole přesunutí ze souboru návrháře do souboru kódu
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDalsiCislo;
+
+        /// <summary>
+        /// Ovládací prvek Reset.
+        /// </summary>
+        /// <remarks>
+        /// Automaticky generované pole.
+        /// K úpravě deklarace pole přesunutí ze souboru návrháře do souboru kódu
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Reset;
     }
 }

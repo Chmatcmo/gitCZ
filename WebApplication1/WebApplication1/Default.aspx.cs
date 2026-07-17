@@ -104,5 +104,16 @@ namespace WebApplication1
             Prvni = Druhe;
             Druhe = fibonacci;
         }
+
+
+        protected void btnReset_Click(object sender, EventArgs e)
+        {
+            lblVysledek.Text = " ";
+
+            AktualniCislo = 1;
+            Prvni = 0;
+            Druhe = 1;
+            lblCislo.Text = AktualniCislo.ToString();
+        }
     }
 }

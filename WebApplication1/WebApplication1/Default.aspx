@@ -53,6 +53,14 @@
                     runat="server"
                     Text="Přidat další číslo"
                     OnClick="btnDalsiCislo_Click" />
+
+                                <br /><br />
+
+                <asp:Button
+                    ID="Reset"
+                    runat="server"
+                    Text="Reset"
+                    OnClick="btnReset_Click" />
             </div>
         </div>
     </form>
