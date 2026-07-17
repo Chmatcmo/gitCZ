@@ -19,3 +19,68 @@ textarea {
         padding: 0;
     }
 }
+
+:root{
+    --card-bg: #fff;
+    --card-border: #d0d7de;
+    --page-bg: #f4f6f8;
+    --accent: #eef2ff;
+    --max-width: 560px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--page-bg);
+}
+
+/* Centrování celé stránky */
+.page-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Obdélník (card) */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: var(--max-width);
+    box-shadow: 0 4px 12px rgba(16,24,40,0.06);
+    text-align: center;
+}
+
+/* Ovládací prvky */
+.controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+/* Výsledek a zalomení dlouhých řetězců */
+.result {
+    margin-top: 12px;
+    word-break: break-word;
+}
+
+/* Styl pro zobrazované číslo */
+.number-badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    min-width: 48px;
+    text-align: center;
+}
