@@ -84,3 +84,13 @@ html, body {
     min-width: 48px;
     text-align: center;
 }
+
+/* Small numeric input used on the card */
+input.small-input,
+textarea.small-input,
+select.small-input {
+    width: 80px;
+    max-width: 80px;
+    box-sizing: border-box;
+    text-align: center;
+}
