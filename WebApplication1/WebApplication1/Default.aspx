@@ -23,8 +23,7 @@
                         ID="txtPocet"
                         runat="server"
                         TextMode="Number"
-                        Text="10"
-                        CssClass="small-input" />
+                        Text="10" />
 
                     <asp:Button
                         ID="btnFibonacci"
