@@ -84,3 +84,29 @@ html, body {
     min-width: 48px;
     text-align: center;
 }
+
+/* Small numeric input used on the card */
+input.small-input,
+textarea.small-input,
+select.small-input {
+    width: 80px;
+    max-width: 80px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Vertical layout for stacked fields (used on Triangle.aspx) */
+.controls.vertical {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.controls.vertical .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    max-width: 220px; /* keep fields reasonably narrow */
+}
