@@ -23,7 +23,8 @@
                         ID="txtPocet"
                         runat="server"
                         TextMode="Number"
-                        Text="10" />
+                        Text="10"
+                        CssClass="small-input" />
 
                     <asp:Button
                         ID="btnFibonacci"
@@ -54,13 +55,22 @@
                     Text="Přidat další číslo"
                     OnClick="btnDalsiCislo_Click" />
 
-                                <br /><br />
+                <br /><br />
 
                 <asp:Button
                     ID="Reset"
                     runat="server"
                     Text="Reset"
                     OnClick="btnReset_Click" />
+
+                <br /><br />
+
+                <!-- New button that navigates to the triangle page -->
+                <asp:Button
+                    ID="btnTriangle"
+                    runat="server"
+                    Text="Kontrola trojúhelníku"
+                    OnClick="btnTriangle_Click" />
             </div>
         </div>
     </form>

@@ -115,5 +115,11 @@ namespace WebApplication1
             Druhe = 1;
             lblCislo.Text = AktualniCislo.ToString();
         }
+
+        // New: redirect to Triangle.aspx
+        protected void btnTriangle_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Triangle.aspx");
+        }
     }
 }
