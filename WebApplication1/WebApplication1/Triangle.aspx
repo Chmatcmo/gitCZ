@@ -16,10 +16,12 @@
                 <div class="controls">
                     <asp:Label ID="lblA" runat="server" Text="Strana a:" />
                     <asp:TextBox ID="txtA" runat="server" TextMode="Number" Text="3" CssClass="small-input" />
+                    <br /><br />
 
                     <asp:Label ID="lblB" runat="server" Text="Strana b:" />
                     <asp:TextBox ID="txtB" runat="server" TextMode="Number" Text="4" CssClass="small-input" />
 
+                    <br /><br />
                     <asp:Label ID="lblC" runat="server" Text="Strana c:" />
                     <asp:TextBox ID="txtC" runat="server" TextMode="Number" Text="5" CssClass="small-input" />
                 </div>
