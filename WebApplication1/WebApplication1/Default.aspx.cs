@@ -93,6 +93,11 @@ namespace WebApplication1
         {
             AktualniCislo++;
 
+            if (AktualniCislo > 46)
+            {
+                return;
+            }
+            
             int fibonacci = Prvni + Druhe;
 
             // Připojíme další číslo místo přepsání textu
