@@ -66,11 +66,9 @@ namespace WebApplication1
 
         protected void btnFibonacci_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtPocet.Text, out int pocet) ||
-                pocet < 1 ||
-                pocet > 99)
+            if (!int.TryParse(txtPocet.Text, out int pocet) || pocet < 1 || pocet > 47)
             {
-                lblVysledek.Text = "Zadejte počet prvků v rozsahu 1 až 99.";
+                lblVysledek.Text = "Zadejte počet prvků v rozsahu 1 až 47.";
                 return;
             }
 
