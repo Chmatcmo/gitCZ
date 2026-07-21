@@ -109,7 +109,7 @@ namespace WebApplication1
             Druhe = fibonacci;
 
             // Po přidání zkontrolujeme, zda jsme nedosáhli limitu, a případně upozorníme
-            if (AktualniCislo >= MaxElements)
+            if (AktualniCislo >= (MaxElements-1))
             {
                 lblLimit.Text = $"Dosaženo maxima ({MaxElements}).";
                 lblLimit.Visible = true;
