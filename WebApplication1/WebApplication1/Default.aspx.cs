@@ -5,6 +5,9 @@ namespace WebApplication1
 {
     public partial class Default : System.Web.UI.Page
     {
+        // Maximální počet povolených čísel
+        private const int MaxElements = 47;
+
         private int AktualniCislo
         {
             get
@@ -61,14 +64,18 @@ namespace WebApplication1
                 Druhe = 1;
                 AktualniCislo = 1;
                 lblCislo.Text = AktualniCislo.ToString();
+
+                // Skryjeme varování při prvním načtení
+                lblLimit.Visible = false;
+                btnDalsiCislo.Enabled = true;
             }
         }
 
         protected void btnFibonacci_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(txtPocet.Text, out int pocet) || pocet < 1 || pocet > 47)
+            if (!int.TryParse(txtPocet.Text, out int pocet) || pocet < 1 || pocet > MaxElements)
             {
-                lblVysledek.Text = "Zadejte počet prvků v rozsahu 1 až 47.";
+                lblVysledek.Text = $"Zadejte počet prvků v rozsahu 1 až {MaxElements}.";
                 return;
             }
 
@@ -91,22 +98,37 @@ namespace WebApplication1
 
         protected void btnDalsiCislo_Click(object sender, EventArgs e)
         {
-            AktualniCislo++;
-
-            if (AktualniCislo > 46)
+            // Pokud už jsme dosáhli (nebo překročili) maxima, zobrazíme zprávu a deaktivujeme tlačítko
+            if (AktualniCislo >= MaxElements)
             {
+                lblLimit.Text = $"Lze zobrazit maximálně {MaxElements} čísel.";
+                lblLimit.Visible = true;
+                btnDalsiCislo.Enabled = false;
                 return;
             }
-            
+
+            // Přidání dalšího čísla
+            AktualniCislo++;
+
             int fibonacci = Prvni + Druhe;
 
-            // Připojíme další číslo místo přepsání textu
             lblCislo.Text += ", " + fibonacci.ToString();
 
             Prvni = Druhe;
             Druhe = fibonacci;
-        }
 
+            // Po přidání zkontrolujeme, zda jsme nedosáhli limitu, a případně upozorníme
+            if (AktualniCislo >= MaxElements)
+            {
+                lblLimit.Text = $"Dosaženo maxima ({MaxElements}).";
+                lblLimit.Visible = true;
+                btnDalsiCislo.Enabled = false;
+            }
+            else
+            {
+                lblLimit.Visible = false;
+            }
+        }
 
         protected void btnReset_Click(object sender, EventArgs e)
         {
@@ -116,9 +138,12 @@ namespace WebApplication1
             Prvni = 0;
             Druhe = 1;
             lblCislo.Text = AktualniCislo.ToString();
+
+            // Reset varování a opět povolit tlačítko
+            lblLimit.Visible = false;
+            btnDalsiCislo.Enabled = true;
         }
 
-        // New: redirect to Triangle.aspx
         protected void btnTriangle_Click(object sender, EventArgs e)
         {
             Response.Redirect("Triangle.aspx");

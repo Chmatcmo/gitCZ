@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs"
-    Inherits="WebApplication1.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %>
 
 <!DOCTYPE html>
 <html>
@@ -13,64 +11,35 @@
     <form id="form1" runat="server">
         <div class="page-center">
             <div class="card">
-                <asp:Label
-                    ID="lblPocet"
-                    runat="server"
-                    Text="Počet prvků:" />
+                <asp:Label ID="lblPocet" runat="server" Text="Počet prvků:" />
 
                 <div class="controls">
-                    <asp:TextBox
-                        ID="txtPocet"
-                        runat="server"
-                        TextMode="Number"
-                        Text="10"
-                        CssClass="small-input" />
-
-                    <asp:Button
-                        ID="btnFibonacci"
-                        runat="server"
-                        Text="Zobrazit posloupnost"
-                        OnClick="btnFibonacci_Click" />
+                    <asp:TextBox ID="txtPocet" runat="server" TextMode="Number" Text="10" CssClass="small-input" />
+                    <asp:Button ID="btnFibonacci" runat="server" Text="Zobrazit posloupnost" OnClick="btnFibonacci_Click" />
                 </div>
 
-                <asp:Label
-                    ID="lblVysledek"
-                    runat="server" />
+                <asp:Label ID="lblVysledek" runat="server" />
 
                 <hr />
 
-                <h3>Fibonnaciho tlacitko</h3>
+                <h3>Fibonaccieho tlačítko</h3>
 
-                <asp:Label
-                    ID="lblCislo"
-                    runat="server"
-                    Text="1"
-                    CssClass="number-badge" />
+                <asp:Label ID="lblCislo" runat="server" Text="1" CssClass="number-badge" />
 
                 <br /><br />
 
-                <asp:Button
-                    ID="btnDalsiCislo"
-                    runat="server"
-                    Text="Přidat další číslo"
-                    OnClick="btnDalsiCislo_Click" />
+                <!-- Label pro zobrazení varování o max. počtu prvků -->
+                <asp:Label ID="lblLimit" runat="server" CssClass="warning" Visible="false" />
+
+                <asp:Button ID="btnDalsiCislo" runat="server" Text="Přidat další číslo" OnClick="btnDalsiCislo_Click" />
 
                 <br /><br />
 
-                <asp:Button
-                    ID="Reset"
-                    runat="server"
-                    Text="Reset"
-                    OnClick="btnReset_Click" />
+                <asp:Button ID="Reset" runat="server" Text="Reset" OnClick="btnReset_Click" />
 
                 <br /><br />
 
-                <!-- New button that navigates to the triangle page -->
-                <asp:Button
-                    ID="btnTriangle"
-                    runat="server"
-                    Text="Kontrola trojúhelníku"
-                    OnClick="btnTriangle_Click" />
+                <asp:Button ID="btnTriangle" runat="server" Text="Kontrola trojúhelníku" OnClick="btnTriangle_Click" />
             </div>
         </div>
     </form>
