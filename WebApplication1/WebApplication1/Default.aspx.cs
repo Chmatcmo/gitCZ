@@ -63,7 +63,7 @@ namespace WebApplication1
                 Prvni = 0;
                 Druhe = 1;
                 AktualniCislo = 1;
-                lblCislo.Text = AktualniCislo.ToString();
+                lblCislo.Text = "0, 1";
 
                 // Skryjeme varování při prvním načtení
                 lblLimit.Visible = false;
@@ -98,15 +98,6 @@ namespace WebApplication1
 
         protected void btnDalsiCislo_Click(object sender, EventArgs e)
         {
-            // Pokud už jsme dosáhli (nebo překročili) maxima, zobrazíme zprávu a deaktivujeme tlačítko
-            if (AktualniCislo > MaxElements)
-            {
-                lblLimit.Text = $"Lze zobrazit maximálně {MaxElements} čísel.";
-                lblLimit.Visible = true;
-                btnDalsiCislo.Enabled = false;
-                return;
-            }
-
             // Přidání dalšího čísla
             AktualniCislo++;
 
@@ -118,7 +109,7 @@ namespace WebApplication1
             Druhe = fibonacci;
 
             // Po přidání zkontrolujeme, zda jsme nedosáhli limitu, a případně upozorníme
-            if (AktualniCislo > MaxElements)
+            if (AktualniCislo >= MaxElements)
             {
                 lblLimit.Text = $"Dosaženo maxima ({MaxElements}).";
                 lblLimit.Visible = true;
