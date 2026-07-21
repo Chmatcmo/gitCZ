@@ -87,17 +87,17 @@ namespace WebApplication1
                 return;
             }
 
-            List<long> posloupnost = new List<long>();
+            List<int> posloupnost = new List<int>();
 
-            long prvni = 0;
-            long druhy = 1;
+            int prvni = 0;
+            int druhy = 1;
 
             // Složíme posloupnost do seznamu
             for (int i = 0; i < pocet; i++)
             {
                 posloupnost.Add(prvni);
 
-                long dalsi = prvni + druhy;
+                int dalsi = prvni + druhy;
                 prvni = druhy;
                 druhy = dalsi;
             }
