@@ -81,9 +81,9 @@ namespace WebApplication1
             // Validace vstupu: převod na int a omezení rozsahu
             if (!int.TryParse(txtPocet.Text, out int pocet) ||
                 pocet < 1 ||
-                pocet > 199)
+                pocet > 99)
             {
-                lblVysledek.Text = "Zadejte počet prvků v rozsahu 1 až 199.";
+                lblVysledek.Text = "Zadejte počet prvků v rozsahu 1 až 99.";
                 return;
             }
 
